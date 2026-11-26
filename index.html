@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Přehledný úvod do algoritmů, jejich vlastností a vývojových diagramů. Vyzkoušejte si krátký test.">
+  <meta name="theme-color" content="#101b2d">
+  <title>Algoritmy — jasný postup k řešení</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#uvod" aria-label="Algoritmy — úvod">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span>algoritmy<span class="brand-dot">.</span></span>
+    </a>
+    <nav aria-label="Hlavní navigace">
+      <a href="#zaklady">Základy</a>
+      <a href="#diagramy">Diagramy</a>
+      <a href="#test">Mini test</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="uvod">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Informatika · základy</p>
+        <h1>Algoritmy.<br><span>Jasný postup</span><br>k řešení.</h1>
+        <p class="hero-intro">Každý problém se dá rozdělit na menší kroky. Algoritmus je návod, který nám ukáže, co udělat — a v jakém pořadí.</p>
+        <a class="button button-primary" href="#zaklady">Pojďme na to <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-glow"></div>
+        <div class="code-card">
+          <div class="code-top"><span></span><span></span><span></span><small>recept.alg</small></div>
+          <div class="code-body">
+            <p><b>01</b><span class="code-purple">ZAČÁTEK</span></p>
+            <p><b>02</b><span>vezmi <i>2 vejce</i></span></p>
+            <p><b>03</b><span>rozšlehej v míse</span></p>
+            <p><b>04</b><span class="code-yellow">POKUD</span> je pánev horká</p>
+            <p><b>05</b><span class="code-indent">nalij směs</span></p>
+            <p><b>06</b><span class="code-purple">KONEC</span></p>
+          </div>
+          <div class="code-note"><span class="note-check">✓</span> postup dává smysl</div>
+        </div>
+        <div class="float-tag tag-loop"><span aria-hidden="true">↻</span> opakování</div>
+        <div class="float-tag tag-branch"><span aria-hidden="true">◇</span> rozhodování</div>
+        <div class="art-spark spark-one" aria-hidden="true">✳</div>
+        <div class="art-spark spark-two" aria-hidden="true">✳</div>
+      </div>
+      <div class="hero-bottom"><span>01 / 03</span><span class="bottom-line"></span><span>Čti, přemýšlej, zkoušej</span></div>
+    </section>
+
+    <section class="section basics" id="zaklady">
+      <div class="section-heading">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Nejdřív základy</p>
+        <h2>Tak co je vlastně<br><span>algoritmus?</span></h2>
+      </div>
+      <div class="basics-content">
+        <p class="lead">Představ si recept. Máš suroviny, přesný postup a na konci hotové jídlo. Algoritmus funguje podobně — jen místo vaření řeší úlohu.</p>
+        <p class="body-copy">Je to <strong>konečná a přesně popsaná posloupnost kroků</strong>, která vede od zadání k výsledku. Počítač je vykonává doslova, proto musí být každý krok srozumitelný a jednoznačný.</p>
+        <div class="property-grid">
+          <article class="property">
+            <span class="property-number">01</span>
+            <h3>Konečnost</h3>
+            <p>Po určitém počtu kroků musí skončit.</p>
+          </article>
+          <article class="property">
+            <span class="property-number">02</span>
+            <h3>Jednoznačnost</h3>
+            <p>Každý krok má jasný a přesný význam.</p>
+          </article>
+          <article class="property">
+            <span class="property-number">03</span>
+            <h3>Věcná správnost</h3>
+            <p>Používá správný postup a vzorce, aby dával správný výsledek.</p>
+          </article>
+          <article class="property">
+            <span class="property-number">04</span>
+            <h3>Obecnost</h3>
+            <p>Řeší celou skupinu úloh, nejen jeden konkrétní příklad.</p>
+          </article>
+          <article class="property">
+            <span class="property-number">05</span>
+            <h3>Opakovatelnost</h3>
+            <p>Stejné vstupy vedou vždy ke stejnému výsledku.</p>
+          </article>
+          <article class="property">
+            <span class="property-number">06</span>
+            <h3>Srozumitelnost</h3>
+            <p>Zápis je přehledný pro autora i další programátory.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="flow-section" id="diagramy">
+      <div class="flow-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Myšlenka v obraze</p>
+        <h2>Vývojový diagram<br>ukáže cestu.</h2>
+        <p>Algoritmus nemusíme zapisovat jen slovy. Ve vývojovém diagramu představuje každý tvar určitý typ kroku a šipky ukazují, kudy pokračovat. Diagram se obvykle kreslí shora dolů a zleva doprava.</p>
+        <a class="text-link" href="#znacky">Poznej značky <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="flow-visual" role="img" aria-label="Vývojový diagram: začátek, načtení čísla, rozhodnutí, výstup na jedné ze dvou větví a konec">
+        <div class="flow-node terminal">START</div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-node input">Čti: číslo</div>
+        <div class="flow-arrow" aria-hidden="true"></div>
+        <div class="flow-node decision">Je číslo<br>větší než 0?</div>
+        <div class="flow-branches">
+          <div class="branch branch-yes"><span>ANO</span><div class="flow-node input">Zobraz: kladné</div></div>
+          <div class="branch branch-no"><span>NE</span><div class="flow-node input">Zobraz: ostatní</div></div>
+        </div>
+        <div class="flow-merge" aria-hidden="true"><span></span><i></i><b></b></div>
+        <div class="flow-node terminal end">KONEC</div>
+      </div>
+    </section>
+
+    <section class="symbols-section" id="znacky">
+      <div class="symbols-heading">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Malý tahák</p>
+        <h2>Čtyři značky,<br><span>které potkáš.</span></h2>
+      </div>
+      <div class="symbol-list">
+        <article class="symbol-item"><span class="symbol-shape symbol-terminal" aria-hidden="true"></span><div><h3>Ovál</h3><p>Mezní značka pro začátek nebo konec algoritmu.</p></div><span class="symbol-index">01</span></article>
+        <article class="symbol-item"><span class="symbol-shape symbol-process" aria-hidden="true"></span><div><h3>Obdélník</h3><p>Výpočet nebo příkaz, který se provede.</p></div><span class="symbol-index">02</span></article>
+        <article class="symbol-item"><span class="symbol-shape symbol-input" aria-hidden="true"></span><div><h3>Kosodélník</h3><p>Vstup nebo výstup dat (např. Čti: nebo Zobraz:).</p></div><span class="symbol-index">03</span></article>
+        <article class="symbol-item"><span class="symbol-shape symbol-decision" aria-hidden="true"></span><div><h3>Kosočtverec</h3><p>Rozhodnutí podle podmínky, například ano/ne.</p></div><span class="symbol-index">04</span></article>
+      </div>
+    </section>
+
+    <section class="quiz-section" id="test">
+      <div class="quiz-intro">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Teď je řada na tobě</p>
+        <h2>Mini test<span class="brand-dot">.</span></h2>
+        <p>Ověř si znalosti a seřaď kroky algoritmu. Test je přímo v HTML; JavaScript jen spočítá výsledek.</p>
+      </div>
+      <form class="quiz-card" id="quiz-form">
+        <fieldset class="quiz-question" data-correct="c">
+          <legend>1. Jak se projeví porušení věcné správnosti algoritmu?</legend>
+          <label class="answer"><input type="radio" name="q1" value="a" required> Program se nikdy nespustí.</label>
+          <label class="answer"><input type="radio" name="q1" value="b"> Program se vždy zacyklí.</label>
+          <label class="answer"><input type="radio" name="q1" value="c"> Program doběhne, ale vrátí chybný výsledek.</label>
+        </fieldset>
+        <fieldset class="quiz-question" data-correct="b">
+          <legend>2. Jakou značkou se ve vývojovém diagramu zapisuje vstup „Čti:“?</legend>
+          <label class="answer"><input type="radio" name="q2" value="a" required> Obdélníkem</label>
+          <label class="answer"><input type="radio" name="q2" value="b"> Kosodélníkem</label>
+          <label class="answer"><input type="radio" name="q2" value="c"> Kosočtvercem</label>
+        </fieldset>
+        <fieldset class="quiz-question" data-correct="c">
+          <legend>3. Která vlastnost zaručuje stejný výsledek při stejných vstupech?</legend>
+          <label class="answer"><input type="radio" name="q3" value="a" required> Obecnost</label>
+          <label class="answer"><input type="radio" name="q3" value="b"> Srozumitelnost</label>
+          <label class="answer"><input type="radio" name="q3" value="c"> Opakovatelnost</label>
+        </fieldset>
+        <fieldset class="quiz-question sequence-question">
+          <legend>4. Seřaď kroky algoritmu pro součet dvou čísel od 1 do 5.</legend>
+          <p class="sequence-help">U každého kroku zvol jeho pořadové číslo. Každé číslo použij právě jednou.</p>
+          <label class="sequence-item"><span class="sequence-step"><span class="sequence-mark mark-terminal" aria-hidden="true"></span><span>ZAČÁTEK</span></span><select class="order-select" aria-label="Pořadí oválu: Začátek" required><option value="">?</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+          <label class="sequence-item"><span class="sequence-step"><span class="sequence-mark mark-process" aria-hidden="true"></span><span>Vypočítej součet: S := A + B.</span></span><select class="order-select" aria-label="Pořadí obdélníku: Výpočet součtu" required><option value="">?</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+          <label class="sequence-item"><span class="sequence-step"><span class="sequence-mark mark-input" aria-hidden="true"></span><span>Zobraz: S.</span></span><select class="order-select" aria-label="Pořadí kosodélníku: Zobrazení výsledku" required><option value="">?</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+          <label class="sequence-item"><span class="sequence-step"><span class="sequence-mark mark-input" aria-hidden="true"></span><span>Čti: A, B.</span></span><select class="order-select" aria-label="Pořadí kosodélníku: Načtení čísel" required><option value="">?</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+          <label class="sequence-item"><span class="sequence-step"><span class="sequence-mark mark-terminal" aria-hidden="true"></span><span>KONEC</span></span><select class="order-select" aria-label="Pořadí oválu: Konec" required><option value="">?</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+        </fieldset>
+        <div class="quiz-controls">
+          <p id="feedback" aria-live="polite"></p>
+          <button class="button button-primary" type="submit">Vyhodnotit <span aria-hidden="true">→</span></button>
+          <button class="button button-reset" type="reset">Vymazat odpovědi</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="closing">
+      <span class="closing-mark" aria-hidden="true">✳</span>
+      <p>Dobré řešení nezačíná kódem.</p>
+      <h2>Začíná jasnou<br>myšlenkou.</h2>
+      <a class="text-link" href="#uvod">Zpátky na začátek <span aria-hidden="true">↑</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#uvod"><span class="brand-mark" aria-hidden="true">A</span><span>algoritmy<span class="brand-dot">.</span></span></a>
+    <p>Malý průvodce algoritmickým myšlením.</p>
+    <a href="citace.md">Zdroje a citace</a>
+  </footer>
+</body>
+</html>
